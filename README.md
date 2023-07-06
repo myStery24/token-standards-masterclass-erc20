@@ -1,3 +1,3 @@
-# Quest 2
+# Quest 3
 
-Project repository for Quest 2 of StackUp's Token Standards Masterclass - ERC20.
+Project repository for Quest 3 of StackUp's Token Standards Masterclass - ERC20.
