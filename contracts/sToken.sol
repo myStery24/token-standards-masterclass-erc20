@@ -6,8 +6,20 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
 
 // add inheritance
-contract sToken {
-    // insert constructor function here
+contract sToken is ERC20, Ownable, ERC20Burnable {
+    // insert constructor function
+    constructor(
+        string memory _name,
+        string memory _symbol
+    ) ERC20(_name, _symbol) {}
+
     // insert mint function here
+    function mint(address to, uint256 amount) external onlyOwner {
+        _mint(to, amount);
+    }
+
     // insert burn function here
+    function burn(address to, uint256 amount) external onlyOwner {
+        _burn(to, amount);
+    }
 }
